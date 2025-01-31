@@ -1,4 +1,4 @@
-import { ValueObject } from "../value-objects";
+import { ValueObject } from "../value-objectts/value-objects";
 
 class StringObjctValue extends ValueObject {
     constructor(private value: string) {
@@ -22,7 +22,7 @@ describe("Value Object Unit test", () => {
         expect(obj3.equals(obj4)).toBe(true);
     })
 
-    test("Should have object value not equals", () => { 
+    test("Should have object value not equals", () => {
         const obj1 = new StringObjctValue("teste");
         const obj2 = new StringObjctValue("teste2");
         expect(obj1.equals(obj2)).toBe(false);
